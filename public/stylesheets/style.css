@@ -1,0 +1,197 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding: 64px 0 45px 0;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#wrap {
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+}
+
+#entermsg {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: #EEE;
+  border-top: 1px solid #999;
+}
+
+#msg {
+ /* width: 94%; */
+}
+
+#header {
+  top: 0;
+  height: 64px;
+  width: 100%;
+  position: fixed;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+
+h1 {
+  margin: 0;
+  padding: 10px; 
+  background-color: #253440;
+  color: #fff;
+  border-bottom: 1px solid #263237;  
+}
+
+#chat {
+  height: 100%;
+  float: left;
+  width: 49%;
+}
+
+#room {
+  padding: 10px;
+}
+
+#switch_room {
+  padding-top: 10px;
+  width: 100%;
+}
+
+#users {
+  border-top: 1px solid #263237;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+#sidemenu {
+  font-size: 1em;
+  margin: 0;
+  padding-bottom: 45px;
+  height: 100%;
+  width: 50%;
+  border-bottom: 1px solid #263237;
+  border-right: 3px solid #263237;
+  float: left;
+  position: relative;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#messages li {
+  margin: 10px 15px;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#user_list {
+  list-style-type: none;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#user_list li {
+  margin: 10px 15px;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user {
+  font-size: 12px;
+  color: #666;
+  padding: 5px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+input {  
+  width: 80%;
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+button {
+  background-color: #2e75b3;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+#mapholder {
+  height: 250px;
+  width: 500px;
+  position: relative;
+  background-color: rgb(229, 227, 223);
+  overflow: hidden;
+}
+
+.header {  
+  font-size: 12px;
+  color: #666;
+  padding: 5px;
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.me .header {
+  background-color: lightyellow;
+}
+
+.who {
+  float: left;
+  font-weight: bold;  
+}
+
+.when {
+  float: right;
+  font-style: italic;
+  color: #999;
+}
+
+.msg {
+  padding: 5px;
+}
+
+.notice {
+  margin: 0 15px;
+  padding: 5px;
+  color: #999;
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}

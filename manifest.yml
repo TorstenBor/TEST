@@ -1,0 +1,11 @@
+---
+applications:
+- name: socialchat
+  memory: 256M
+  instances: 1
+  host: socialchat
+  domain: mybluemix.net
+  path: .
+  command: npm start
+  services:
+    - redis-socialchat

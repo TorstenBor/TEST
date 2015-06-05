@@ -1,0 +1,45 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Socializer
+    meta(name='viewport', content='initial-scale=1.0, width=device-width, \
+      height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/normalize/3.0.1/normalize.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="http://maps.google.com/maps/api/js?sensor=false")
+  body
+    div#header
+      h1 Socializer
+    div#wrap
+      div#main.clearfix
+        div#sidemenu
+          div#room
+            div#location Location
+              div#mapholder
+            div#current_room.bold
+            div#switch_room
+              form#room_form
+                input(id='chg_room', autocomplete='off', autofocus)
+                button(type='submit') Switch Room
+          div#users Current users in this room:
+            ul#user_list
+              - for(var i=0,ln=users.length;i<ln;i++)
+                li
+                  .user.clearfix
+                    .who= users[i]
+        div#chat
+          ul#messages
+            - for(var i=0,ln=messages.length;i<ln;i++)
+              li
+                .header.clearfix
+                  .who= messages[i].nickname
+                  .when= new Date(messages[i].when).toString().substr(0, 24)
+                .msg= messages[i].msg
+          div#entermsg
+            form#msg_form
+              input(id='msg', autocomplete='off', autofocus)
+              button(type='submit') Send
+    script(src='//cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/client.js')
